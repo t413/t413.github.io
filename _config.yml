@@ -1,0 +1,42 @@
+---
+permalink: /:year/:month/:title
+lsi: false
+minutes: "    5986.6"
+days: "       4.2"
+markdown: kramdown
+highlighter: pygments
+
+excerpt_separator: <!--more-->
+paginate: 3
+
+pretty_style: html_extension
+port: 4000
+safe: false
+exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
+
+
+## from theme.yml in lagom:
+
+# Color for top bar, links, etc
+highlight_color: '#188F79'
+
+# Profile links on the left sidebar, leave blank to ignore
+social:
+  github: t413
+  stackoverflow: 783100
+  twitter: _swanson
+  facebook: etobrien
+  linkedin: etobrien
+  gplus: 106594292653831578871
+  spotify: t4obrien
+
+# "Hi, I'm _______"
+name: Tim O'Brien
+email: timo@t413.com
+tagline: "fun stuff"
+
+# Google Analytics key, leave blank to ignore
+google_analytics_key: UA-49607422-1
+
+# Toggle "Postings are my own" disclaimer in footer
+show_disclaimer: true

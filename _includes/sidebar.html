@@ -1,0 +1,67 @@
+<nav>
+  <h1>Hi.</h1>
+  <a href="/" id="logo">
+    <i class="fa fa-paper-plane-o fa-5x"></i>
+  </a>
+  <h2>I'm <a href="/">{{ site.name }}</a>.</h2>
+  <hr/>
+  <!--
+    fa-lightbulb
+    fa-star
+    fa-paper-plane-o
+    fa-bug
+  -->
+
+  <h3 id="recent-posts-title">Recent Articles</h3>
+
+  <ul id="recent-posts">
+    {% for post in site.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a><span>&laquo; {{ post.date | date_to_string }}</span></li>
+    {% endfor %}
+  </ul>
+
+  <br />
+
+  Follow me:
+  <div id="stalker">
+    {% if site.social.github %}
+    <a title="{{ site.social.github }} on Github" href="https://github.com/{{ site.social.github }}">
+      <i class="fa fa-github-square"></i>
+    </a>
+    {% endif %}
+
+    {% if site.social.stackoverflow %}
+    <a title="{{ site.name }} on Stack Overflow" href="http://stackoverflow.com/users/{{site.social.stackoverflow }}">
+      <i class="fa fa-stack-overflow"></i>
+    </a>
+    {% endif %}
+
+    {% if site.social.facebook %}
+    <a title="{{ site.name }} on Facebook" href="https://facebook.com/{{ site.social.facebook }}">
+      <i class="fa fa-facebook-square"></i>
+    </a>
+    {% endif %}
+
+    {% if site.social.linkedin %}
+    <a title="{{ site.name }} on LinkedIn" href="https://www.linkedin.com/in/{{ site.social.linkedin }}">
+      <i class="fa fa-linkedin-square"></i>
+    </a>
+    {% endif %}
+
+    {% if site.social.gplus %}
+    <a title="{{ site.name }} on Google Plus" href="https://plus.google.com/{{ site.social.gplus }}">
+      <i class="fa fa-google-plus-square"></i>
+    </a>
+    {% endif %}
+
+    {% if site.social.spotify %}
+    <a title="{{ site.name }} on Spotify" href="http://open.spotify.com/user/{{ site.social.spotify }}">
+      <i class="fa fa-spotify"></i>
+    </a>
+    {% endif %}
+
+    <a title="RSS feed" id="rss" href="/atom.xml">
+      <i class="fa fa-rss-square"></i>
+    </a>
+  </div>
+</nav>
