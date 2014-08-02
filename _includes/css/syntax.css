@@ -7,10 +7,12 @@
   margin-bottom:20px;
 }
 .linenodiv, .lineno { color: #777;}
+
+td.linenos { width: 40px; }
+
 .linenodiv {
   border-right: none;
   background-color: #eee;
-  width: 40px;
   padding: 10px;
   text-align: right;
 }
@@ -23,13 +25,12 @@ span.lineno {
   text-align: right;
 }
 
-pre {
-  white-space:pre;
-  overflow:auto
-}
+.highlighttable { table-layout: fixed; white-space: nowrap; width:100%; }
+
 
 code,pre {
-  font-family:Monaco,Menlo,Consolas,"Courier New",monospace
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  overflow:auto;
 }
 
 .hll { background-color: #ffffcc }
