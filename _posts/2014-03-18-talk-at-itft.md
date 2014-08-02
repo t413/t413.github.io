@@ -3,7 +3,7 @@ layout: post
 title: "Talk on Drones at the IFTF"
 ---
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/WWPnZ4fqvYE" frameborder="0" allowfullscreen></iframe>
+<div class="icontain"><iframe src="//www.youtube.com/embed/WWPnZ4fqvYE" allowfullscreen></iframe></div>
 
 I gave this talk at the [Institute for the Future](http://plustech.iftf.org/) back in January. It's on drones / UAVs / sUAVs, their past and what they can do today. I gave a call-to-build to make these things yourself and understand the whole system.
 
