@@ -72,30 +72,34 @@ img {
   margin-right: auto;
 }
 
-#recent-posts-title {
+#recent-posts {
+  margin-bottom: 20px;
+}
+
+#recent-posts h3 {
   margin-bottom: 4px;
   font-size: 18px;
 }
 
-ul#recent-posts {
+#recent-posts ul {
   margin-top: 0;
   list-style-type: none;
   margin-bottom: 10px;
 }
 
-ul#recent-posts li {
+#recent-posts ul li {
   font-size: 13px;
   margin-bottom: 0px;
 }
 
-ul#recent-posts span {
+#recent-posts ul span {
   font-family: 'Lucida', 'Andale';
   color: #aaa;
   padding-left: 5px;
   font-size:12px;
 }
 
-ul#recent-posts a {
+#recent-posts ul a {
   color: #444;
 }
 
@@ -218,15 +222,19 @@ nav hr {
 }
 
 #stalker {
-  display: inline-block;
-  height: 18px;
-  margin-left: 5px;
 }
 
-#stalker a {
-  width: 29px;
-  overflow: hidden;
+#stalker ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#stalker li, #stalker li a.fa-stack {
   float: left;
+  display:block;
+  width:26px;
+  height:26px;
 }
 
 #stalker i {

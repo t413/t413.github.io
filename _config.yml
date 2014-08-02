@@ -39,4 +39,4 @@ tagline: "fun stuff"
 google_analytics_key: UA-49607422-1
 
 # Toggle "Postings are my own" disclaimer in footer
-show_disclaimer: true
+show_disclaimer: false
