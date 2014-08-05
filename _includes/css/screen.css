@@ -34,6 +34,7 @@ h1 {
 h2 {
   font-size: 24px;
   line-height: 30px;
+  font-weight: 800;
 }
 
 h3 {
@@ -103,10 +104,43 @@ img {
   color: #444;
 }
 
+#tagpage-header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #DDD;
+}
+#tagpage-header #bigtag {
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: 800;
+}
+#tagpage-header i {
+  vertical-align: sub;
+}
+
+
 .meta {
   color: #aaa;
+  font-size: 85%;
   margin: 0 0 10px 0;
 }
+
+.mdash { padding: 0 8px;}
+
+span.inlinetags, span.inlinetags a {
+  color: #aaa;
+  font-style: italic;
+}
+span.inlinetags i { color: #ccc; }
+
+div#tags a { color: #555; }
+div#tags {
+  margin: 30px 0 20px;
+  padding-top: 20px;
+  border-top: 1px solid #DDD;
+  color: #555;
+}
+
 
 .site .footer {
   font-size: 80%;

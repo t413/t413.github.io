@@ -1,8 +1,6 @@
 ---
 permalink: /:year/:month/:title
 lsi: false
-minutes: "    5986.6"
-days: "       4.2"
 markdown: kramdown
 highlighter: pygments
 
@@ -14,8 +12,6 @@ port: 4000
 safe: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 
-
-## from theme.yml in lagom:
 
 # Color for top bar, links, etc
 highlight_color: '#188F79'
