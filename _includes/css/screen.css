@@ -104,17 +104,17 @@ img {
   color: #444;
 }
 
-#tagpage-header {
+.tagpage-header {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #DDD;
 }
-#tagpage-header #bigtag {
+.tagpage-header .bigtag {
   font-size: 32px;
   line-height: 30px;
   font-weight: 800;
 }
-#tagpage-header i {
+.tagpage-header i {
   vertical-align: sub;
 }
 
