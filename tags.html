@@ -6,21 +6,22 @@ title: tim o'brien @ t413.com
 <h2>All <i class="fa fa-tags"></i>tags</h2>
 
 
-{% for post in site.posts %}
-  TAGS: {{ post.tags }}
-{% endfor %}
-
-
-{% for thistag in site.data.tags %}
-
-  <div class="tagpage-header">
-    <span class="bigtag">{{ thistag }} <i class="fa fa-tag"></i></span><span class="mdash">&mdash;</span>Articles by tag
+{% for tag in site.tags %}
+  <div class="tagpage-header" id="{{ tag[0] }}">
+    <span class="bigtag">{{ tag[0] }} <i class="fa fa-tag"></i></span>
+    <span class="mdash">&mdash;</span>Articles by tag
   </div>
 
-  <div class="listposts">
-    {% for page in site.tags[thistag] %}
-      <a href="{{ page.url }}">{{ page.title }}</a> - {{ page.date | date: "%B %d, %Y" }}
-      <!-- {{ page.excerpt }} -->
+  <ul class="listposts">
+    {% for page in tag[1] %}
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+        <span class="mdash">&mdash;</span>
+        {{ page.date | date: "%B %d, %Y" }}<br />
+        {{ page.excerpt | strip_html | truncatewords:25 }}
+
+      </li>
     {% endfor %}
-  </div>
+    {% if forloop.last == false %}<hr />{% endif %}
+  </ul>
 {% endfor %}

@@ -43,9 +43,15 @@ h3 {
   margin: 1em 0;
 }
 
-ul {
-  margin: 1em 0;
-  list-style: disc;
+
+.content ul {
+  list-style: none;
+  margin: 1em 20px;
+}
+.content ul li:before {
+  font-family: 'FontAwesome';
+  content: '\f105';
+  margin:0 5px 0 -15px;
 }
 
 a {
@@ -105,9 +111,7 @@ img {
 }
 
 .tagpage-header {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #DDD;
+  margin: 20px 0;
 }
 .tagpage-header .bigtag {
   font-size: 32px;
@@ -117,7 +121,6 @@ img {
 .tagpage-header i {
   vertical-align: sub;
 }
-
 
 .meta {
   color: #aaa;
