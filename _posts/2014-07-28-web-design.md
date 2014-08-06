@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Web Design"
-tags: [projects]
+tags: [projects, web]
 ---
 
 Here's a look at some old web projects I've built in the past. Some I've built for fun, some freelance, some for family.
@@ -29,9 +29,9 @@ The second generation t413.com. Built 2010-2012. Made full use of html5 push/pop
 
 [ncsu.edu/agromeck](http://ncsu.edu/agromeck), designed for NC State Student Media in 2009. (since changed)
 
-[![b&amp;w](/res/webdesign/b-w.png)](/res/webdesign/e115_project/)
+[![b&w](/res/webdesign/b-w.png)](/res/webdesign/e115_project/)
 
-[B&amp;W photography](/res/webdesign/e115_project/), designed for my e115 project in 2009. I went a little overboard on the design.
+[B&W photography](/res/webdesign/e115_project/), designed for my e115 project in 2009. I went a little overboard on the design.
 
 [![wildhairlivingroomtour.com](/res/webdesign/wild-hair.png)](http://wildhairlivingroomtour.com)
 

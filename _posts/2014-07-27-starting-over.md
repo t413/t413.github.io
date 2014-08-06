@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Starting Over (this site)"
-tags: [meta]
+tags: [meta, web]
 ---
 
 My web site, t413.com, has been down for 6 months. It's time I fixed it.

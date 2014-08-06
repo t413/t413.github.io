@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Talk on Drones at the IFTF"
-tags: [youtube, talks]
+tags: [youtube, talks, flying]
 ---
 
 <div class="icontain"><iframe src="//www.youtube.com/embed/WWPnZ4fqvYE" allowfullscreen></iframe></div>

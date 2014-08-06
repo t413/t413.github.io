@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Damn useful SMS conversion"
-tags: [tools, github]
+tags: [tools, github, python]
 ---
 
 Getting a new iPhone or Android phone? Leaving Google Voice?

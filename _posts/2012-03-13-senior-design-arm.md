@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Senior Designing: Robot Arm Style"
-tags: [github, projects]
+tags: [github, projects, embedded]
 ---
 
 ![Arm 3D view](https://sites.google.com/a/ncsu.edu/robot-manipulator-arm/_/rsrc/1329116601555/home/arm.png?height=212&amp;width=320)For my ECE senior design project I'm building a robotic arm for the NCSU [Terrestrial Robotics Club](http://www.ncsumarsrover.com/) as they take on the [University Rover Challenge](http://urc.marssociety.org/). 
