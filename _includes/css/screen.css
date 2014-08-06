@@ -81,6 +81,7 @@ img {
 
 #recent-posts {
   margin-bottom: 20px;
+  font-size: 13px;
 }
 
 #recent-posts h3 {
@@ -95,16 +96,12 @@ img {
 }
 
 #recent-posts ul li {
-  font-size: 13px;
   margin-bottom: 0px;
 }
 
 #recent-posts ul a {
   padding-left: 4px;
   font-weight: 400;
-}
-
-#recent-posts ul a {
   color: #444;
 }
 
@@ -142,6 +139,15 @@ div#tags {
   color: #555;
 }
 
+#allposts li.monthitem {
+  font-size: 38px;
+  line-height: 30px;
+  font-weight: 600;
+}
+#allposts li.monthitem:before {
+  content:'';
+  margin:0;
+}
 
 .site .footer {
   font-size: 80%;
