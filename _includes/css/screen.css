@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-size: 24px;
   line-height: 30px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 h3 {
@@ -99,11 +99,9 @@ img {
   margin-bottom: 0px;
 }
 
-#recent-posts ul span {
-  font-family: 'Lucida', 'Andale';
-  color: #aaa;
-  padding-left: 5px;
-  font-size:12px;
+#recent-posts ul a {
+  padding-left: 4px;
+  font-weight: 400;
 }
 
 #recent-posts ul a {
@@ -116,7 +114,7 @@ img {
 .tagpage-header .bigtag {
   font-size: 32px;
   line-height: 30px;
-  font-weight: 800;
+  font-weight: 600;
 }
 .tagpage-header i {
   vertical-align: sub;
@@ -193,10 +191,6 @@ nav hr {
 .sidebar {
   padding-top: 25px;
   font-family: "Open Sans", sans-serif;
-}
-
-.sidebar p {
-  font-weight: 200;
 }
 
 .sidebar a {

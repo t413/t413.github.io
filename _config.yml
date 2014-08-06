@@ -5,12 +5,12 @@ markdown: kramdown
 highlighter: pygments
 
 excerpt_separator: <!--more-->
-paginate: 3
+paginate: 4
 
 pretty_style: html_extension
 port: 4000
 safe: false
-exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
+exclude: [CNAME, README.md, .gitignore]
 
 
 # Color for top bar, links, etc
@@ -20,7 +20,6 @@ highlight_color: '#188F79'
 social:
   github: t413
   stackoverflow: 783100
-  twitter: _swanson
   facebook: etobrien
   linkedin: etobrien
   gplus: 106594292653831578871

@@ -5,18 +5,19 @@
   </a>
   <h2>I'm <a href="/">{{ site.name }}</a>.</h2>
   <hr/>
-  <!--
-    fa-lightbulb
-    fa-star
-    fa-paper-plane-o
-    fa-bug
-  -->
 
   <div id="recent-posts">
     <h3>Recent Articles</h3>
     <ul>
-      {% for post in site.posts limit:5 %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a><span>&laquo; {{ post.date | date_to_string }}</span></li>
+      {% assign lastd = site.time | date: "%B %Y" %}
+      {% for post in site.posts limit:6 %}
+        {% assign postmonth = post.date | date: "%B %Y" %}
+        {% if postmonth != lastd %}
+          <li>{{ postmonth }}</li>
+        {% endif %}
+
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% assign lastd = postmonth %}
       {% endfor %}
     </ul>
   </div>
