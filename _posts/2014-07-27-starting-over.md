@@ -6,7 +6,7 @@ tags: [meta, web]
 
 My web site, t413.com, has been down for 6 months. It's time I fixed it.
 
-####Wha' 'ha happened *wuz*
+####What happened?
 
 My server was a intel atom nettop running behind someone's desk back in North Carolina.
 
@@ -14,7 +14,7 @@ They got a new desk.
 
 My site went down.
 
-My sever disappeared.
+My server disappeared.
 <!--more-->
 
 ####Why was I running my site like that?

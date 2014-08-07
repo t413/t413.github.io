@@ -1,13 +1,21 @@
 ---
 layout: post
-title: "Damn useful SMS conversion"
+title: "Universal SMS Conversion Tool"
 tags: [tools, github, python]
 ---
 
-Getting a new iPhone or Android phone? Leaving Google Voice?
-Want a searchable CSV, JSON, or XML file of your conversations?
-Making a sweet app and you want to run on *all* your past texts at once?
-Want to move all your messages from your past into a new, date-sorted, database?
+Working on a project at INQ Mobile I started this tool to convert downloaded
+Google Voice messages to native Android smsmms.db sqlite databases. I was doing
+local analytics and wanted a big real-world dataset. I built what I called
+*Android-SMS-DB-importer* to import six years of SMS history from two iPhones,
+Google Voice, and Android into one Android smsmms.db file. Since then I've expanded
+the tool's scope to be a universal SMS translator.
+
+There are lots of real use cases for such a tool. Migrating from/to iPhone from/to
+Android? Leaving Google Voice? Want a searchable CSV, JSON, or XML file of
+your conversations? Also making a sweet SMS processing app and you want to
+run on *all* your past texts at once? Want to move all your messages from your
+past into a new, date-sorted, database? It should be ready to roll.
 
 {% highlight bash linenos=table %}
 git clone git@github.com:t413/SMS-Tools.git
