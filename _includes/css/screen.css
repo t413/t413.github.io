@@ -54,6 +54,11 @@ h3 {
   margin:0 5px 0 -15px;
 }
 
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   color: {{ site.highlight_color }};
   text-decoration: none;

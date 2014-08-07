@@ -93,5 +93,5 @@ This player is a great success. It’s something I’m proud of and have learned
 
 ###Pictures
 
-<div class="icontain i4x3"><iframe class="imgur-album" src="//imgur.com/a/I3DH2/embed"></iframe></div>
+<div class="icontain i4x3"><iframe class="imgur-album" src="//imgur.com/a/I3DH2/embed?background=f2f2f2&text=1a1a1a&link=4e76c9"></iframe></div>
 

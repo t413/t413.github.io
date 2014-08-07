@@ -12,7 +12,7 @@ Using an Phillips NXP LPC20148 ARM7 processor, a Nintendo Wii motion+, and some 
 
 <!--more-->
 
-<div class="icontain i4x3"><iframe class="imgur-album" src="//imgur.com/a/x7aOU/embed"></iframe></div>
+<div class="icontain i4x3"><iframe class="imgur-album" src="//imgur.com/a/x7aOU/embed?background=f2f2f2&text=1a1a1a&link=4e76c9"></iframe></div>
 
 ### Props
 
