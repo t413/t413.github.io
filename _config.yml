@@ -16,6 +16,8 @@ exclude: [CNAME, README.md, .gitignore]
 # Color for top bar, links, etc
 highlight_color: '#188F79'
 
+url: http://t413.com
+
 # Profile links on the left sidebar, leave blank to ignore
 social:
   github: t413
