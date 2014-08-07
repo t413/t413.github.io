@@ -6,9 +6,9 @@ tags: [github, projects, embedded]
 
 Recent edit: The project [is now on github!](https://github.com/t413/mp3_player_v2) with all the original svn commit history included.
 
-[![](http://i.imgur.com/huV73nNl.jpg "Hosted by imgur.com")](http://imgur.com/huV73nN)
 
 ###Background
+[![](http://i.imgur.com/huV73nNl.jpg "Hosted by imgur.com")](http://imgur.com/huV73nN){: style="float:right;width:40%;"}
 
 I'm participating in a national student exchange this semester at San Jose State University in Silicon Valley California. One of my classes is CMPE 146, Embedded Microprocessor System Design. For one of our projects we were told to make an mp3 player on the [dev board](https://sjvalley.com/shop/index.php?page=shop.product_details&amp;flypage=flypage.tpl&amp;product_id=27&amp;category_id=1&amp;option=com_virtuemart&amp;Itemid=63&amp;vmcchk=1&amp;Itemid=63) we had to buy for the class. Since the final goal was the same for each person the design was especially important. Here's my design:
 

@@ -4,11 +4,16 @@ title: "RTOS quadcopter flight computer"
 tags: [projects, flying, embedded]
 ---
 
-[![](http://i.imgur.com/gQg8QG5l.jpg "Hosted by imgur.com")](http://imgur.com/gQg8QG5)
+Update: [firmware](https://github.com/t413/os_copter), [remote](https://github.com/t413/remote_xbee),
+and [packet library](https://github.com/t413/ser_pkt) all now on github.
 
-The advent of the modern Chinese manufacturing empire has fueled an explosion of high performance, high quality, reliable, accessible, and low-cost hobby electronics like never before. That, coupled with technological advances, have made electric systems more than just an alternative to nitro fuel powered models. The technology improvements have also enabled, for the first time, hobby-level computer flight control systems and even autopilots. Many commercial and community projects have been developed to perform these tasks and out of them have come low-cost, electric powered, computer controlled planes, cars, conventional helicopters, and helicopters that defy convention. Copters with two, three, four, six, and even eight rotors have taken root in the community as a simple and effective way to lift large payloads, film smooth aerial video, and perform unbelievable acrobatics. As part of a previous project I built a quadcopter with a laser-cut ABS plastic frame and modified version of the open source AeroQuad project. This semester I built my own open source flight software for quadcopters using the NXP LPC2148 ARM 7 processor on an FreeRTOS system. This allows the inherently unstable quadcopter to fly as a human controllable helicopter with only the addition of a wii motion plus as a gyroscope sensor for rotational acceleration.
+[![](http://i.imgur.com/gQg8QG5l.jpg "Flight controller detail shot. Hosted by imgur.com")](http://imgur.com/gQg8QG5){: style="float:right;width:50%;"}
 
-[![](http://i.imgur.com/GOud01Pl.jpg "Hosted by imgur.com")](http://imgur.com/GOud01P)
+The advent of the modern Chinese manufacturing empire has fueled an explosion of high performance, high quality, reliable, accessible, and low-cost hobby electronics like never before. That, coupled with technological advances, have made electric systems more than just an alternative to nitro fuel powered models. The technology improvements have also enabled, for the first time, hobby-level computer flight control systems and even autopilots. Many commercial and community projects have been developed to perform these tasks and out of them have come low-cost, electric powered, computer controlled planes, cars, conventional helicopters, and helicopters that defy convention. Copters with two, three, four, six, and even eight rotors have taken root in the community as a simple and effective way to lift large payloads, film smooth aerial video, and perform unbelievable acrobatics.
+
+As part of a previous project I built a quadcopter with a laser-cut ABS plastic frame and modified version of the open source AeroQuad project. This semester I built my own open source flight software for quadcopters using the NXP LPC2148 ARM 7 processor on an FreeRTOS system. This allows the inherently unstable quadcopter to fly as a human controllable helicopter with only the addition of a wii motion plus as a gyroscope sensor for rotational acceleration.
+
+[![](http://i.imgur.com/GOud01Pl.jpg "Quadcopter design wide shot. Hosted by imgur.com")](http://imgur.com/GOud01P)
 
 * Technology breakdown
 * CPU: Phillips NXP LPC2148 ARM7
@@ -20,11 +25,13 @@ The advent of the modern Chinese manufacturing empire has fueled an explosion of
 * Accurate, 10bit remote with backlit LCD
   * Four level menu system
 
-[![](http://i.imgur.com/xHCccO3l.jpg "Hosted by imgur.com")](http://imgur.com/xHCccO3)
+[![](http://i.imgur.com/xHCccO3l.jpg "Remote control. Hosted by imgur.com")](http://imgur.com/xHCccO3)
 
 ### Background
 
-I like remote controlled gadgets a lot. Moving beyond the 2d world of RC cars has long been my dream, but until last year it was just that: a dream. I designed and built a simple rover, controlled by a mint tin that you could simply tilt in the direction you wanted it to drive. After mastering a simple $40 mall-bought helicopter I wanted to move bigger. Rather than shell out several hundred dollars for a regular helicopter I decided to build an AeroQuad quadcopter using parts from hobbyking.com and sparkfun.com. I built my first frame, crashed a lot, and had many issues with my 15 year old FM radio controller. I designed a basic laser-cut acrylic remote and wrote modifications to fly it over a digital XBee connection. I then designed and built a laser-cut ABS plastic frame for the copter. When I dealt with speed and reliability issues when sending ascii values over serial I decided to design a data packet transfer method similar to UDP. Upon arriving to SJSU I implemented although never finished testing a method for altitude control. I started the year with no idea for how the stabilization with PID control worked, specifically how any of the data busses were implemented, or how the sensor data was processed or used. In the course of this past year of reading, taking apart, fixing, and implementing my own features I’ve learned a great deal. I decided for my open-ended project for CMPE 146 that I’d design and  implement my own flight computer program using the real-time operating system FreeRTOS.
+I like remote controlled gadgets a lot. Moving beyond the 2d world of RC cars has long been my dream, but until last year it was just that: a dream. I designed and built a simple rover, controlled by a mint tin that you could simply tilt in the direction you wanted it to drive. After mastering a simple $40 mall-bought helicopter I wanted to move bigger. Rather than shell out several hundred dollars for a regular helicopter I decided to build an AeroQuad quadcopter using parts from hobbyking.com and sparkfun.com. I built my first frame, crashed a lot, and had many issues with my 15 year old FM radio controller. I designed a basic laser-cut acrylic remote and wrote modifications to fly it over a digital XBee connection. I then designed and built a laser-cut ABS plastic frame for the copter.
+
+When I dealt with speed and reliability issues when sending ascii values over serial I decided to design a data packet transfer method similar to UDP. Upon arriving to SJSU I implemented although never finished testing a method for altitude control. I started the year with no idea for how the stabilization with PID control worked, specifically how any of the data busses were implemented, or how the sensor data was processed or used. In the course of this past year of reading, taking apart, fixing, and implementing my own features I’ve learned a great deal. I decided for my open-ended project for CMPE 146 that I’d design and  implement my own flight computer program using the real-time operating system FreeRTOS.
 
 <!--more-->
 
@@ -58,15 +65,20 @@ To initialize the sensor I had to send the value 0x04 to register 0xFE at addres
 
 #### XBee
 
+[![](http://i.imgur.com/s6m8AqSl.jpg "Xbee detail shot. Hosted by imgur.com")](http://imgur.com/s6m8AqS){: style="float:right;
+width:35%;"}
+
 For communication I used the XBee Series 2 wireless modules. For detailed setup information and operation of the modules, see my previous report on the subject at [t413.com/news/fast-2-way-xbee-series-2-data](http://t413.com/news/fast-2-way-xbee-series-2-data). I used UART0 for the XBee because UART1 shares the same pins as the timers for PWM 4 and 6. This required me to switch the UART / FTDI switch each time I want to program the µC, but there doesn’t seem to be a way around this except to design a native USB bootloader so that the FTDI chip can be left off. (future project: DUF bootloader)
 
-The data sent over the XBee is a simple packetized data transfer method with a header, type, length, payload and checksum design. This allows for a means of checking command integrity, something I found to be vitally important. It also reduces the command size and expedites the data processing on both ends. See more on my svn viewer: [t413.com/websvn/filedetails.php?repname=os_copter&amp;path=/drivers/ser_pkt.h](http://t413.com/websvn/filedetails.php?repname=os_copter&amp;path=/drivers/ser_pkt.h).
+The data sent over the XBee is a simple packetized data transfer method with a header, type, length, payload and checksum design. This allows for a means of checking command integrity, something I found to be vitally important. It also reduces the command size and expedites the data processing on both ends. See the library at [github.com/t413/ser_pkt](https://github.com/t413/ser_pkt).
 
 ### Task breakdown
 
 #### Communication Task
 
 This task simply runs getSerialPacket(), then runs a series of switch()es to decide what to do with each type of received data and do it. When, for example, it gets a kind of USER_CONTROL and type of FULL_REMOTE (#defined as macros on both the transmitter and receiver) it reads all four 16 bit integers it expects, processes it by scaling the pitch/roll/yaw values, and saving it to the flight_settings struct. This flight_settings structure is passed by reference to both the communication task and the flight task and is used directly by the flight task to fly the quadcopter.
+
+[![xbees-together](http://i.imgur.com/172YcKcl.jpg){: style="width:60%;margin:auto;"}](http://i.imgur.com/172YcKcl.jpg "xbees-together"){: style="display:block;text-align:center"}
 
 #### Flight Task
 
@@ -80,8 +92,11 @@ The The arming process is to maintain safe and predictable operation. The first 
 
 This is an open source project under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license. See this page for details: [http://creativecommons.org/licenses/by-nc-sa/3.0/us/](http://creativecommons.org/licenses/by-nc-sa/3.0/us/)
 
-You can easily browse and download my source code for this project here: [http://t413.com/websvn/listing.php?repname=os_copter](http://t413.com/websvn/listing.php?repname=os_copter)
+OS-copter project, now on GitHub: [github.com/t413/os_copter](https://github.com/t413/os_copter)
 
-The remote’s source code here: [http://t413.com/websvn/listing.php?repname=Arduino&amp;path=/rover_xbee/](http://t413.com/websvn/listing.php?repname=Arduino&amp;path=/rover_xbee/)
+Remote project on GitHub: [github.com/t413/remote_xbee](https://github.com/t413/remote_xbee)
+
+Packet communications project on GitHub: [github.com/t413/ser_pkt](https://github.com/t413/ser_pkt)
+
 
 
