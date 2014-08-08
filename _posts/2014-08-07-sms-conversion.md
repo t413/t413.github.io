@@ -3,6 +3,7 @@ layout: post
 title: "Universal SMS Conversion Tool"
 tags: [tools, github, python]
 ---
+Edit: Now available in pip, just `pip install smstools`.
 
 Working on a project at INQ Mobile I started this tool to convert downloaded
 Google Voice messages to native Android smsmms.db sqlite databases. I was doing
@@ -18,9 +19,8 @@ run on *all* your past texts at once? Want to move all your messages from your
 past into a new, date-sorted, database? It should be ready to roll.
 
 {% highlight bash linenos=table %}
-git clone git@github.com:t413/SMS-Tools.git
-cd SMS-Tools
-python sms_tools.py iphone.db androids.xml android.db out.csv
+pip install smstools
+smstools iphone.db androids.xml android.db out.csv
 {% endhighlight %}
 
 Imported. Normalized. Sorted. Exported. Easy.
