@@ -22,6 +22,9 @@ url: http://t413.com
 name: Tim O'Brien # "Hi, I'm _______"
 email: timo@t413.com
 tagline: "fun stuff"
+favicon:     "res/favicon.ico"
+touch_icon:  "res/icon.png"
+touch_icon2x:  "res/Icon60-2x.png"
 keywords: "design, android, ios, db, github, drones, databases, iphone, app, tim, o'brien, voice, t413, tool, talks, project, json, server, flying"
 google_analytics_key: UA-49607422-1
 
